@@ -1,7 +1,5 @@
 # ArmTrade: Analysis of information for trade operations
 
-<a href="https://github.com/SocialBoardGames/socialgames"><img src="https://raw.githubusercontent.com/SocialBoardGames/socialgames/master/public/img/logoSocialGames.png" align="left" hspace="10" vspace="6"></a>
-
 ## Requerimentos
 
 Para utilizar e também colaborar com este projeto você vai precisar ter instalado no seu computador:
