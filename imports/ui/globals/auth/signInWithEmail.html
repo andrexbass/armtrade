@@ -1,0 +1,43 @@
+<template name="signInWithEmail">
+    <form id="signup-form" class="mb-lg">
+        <div class="form-group has-feedback">
+            <label for="signupInputEmail1" class="text-muted">{{_ 'auth.FULL_NAME'}}</label>
+            <input id="signup-name" type="text" autocomplete="off" required=""
+                   class="form-control">
+            <span class="fa fa-user form-control-feedback text-muted"></span>
+        </div>
+
+        <div class="form-group has-feedback">
+            <label for="signupInputEmail1" class="text-muted">{{_ 'auth.E_MAIL_ADDRESS'}}</label>
+            <input id="signup-email" type="email" autocomplete="off" required="" class="form-control">
+            <span class="fa fa-envelope form-control-feedback text-muted"></span>
+        </div>
+
+        <div class="form-group has-feedback">
+            <label for="signupInputEmail1" class="text-muted">{{_ 'auth.PASSWORD'}}</label>
+            <input id="signup-password" type="password" autocomplete="off" required="" class="form-control">
+            <span class="fa fa-lock form-control-feedback text-muted"></span>
+        </div>
+
+        <div class="form-group has-feedback">
+            <label for="signupInputEmail1" class="text-muted">{{_ 'auth.RETYPE_PASSWORD'}}</label>
+            <input id="signup-confirm-password" type="password" autocomplete="off" required="" class="form-control">
+            <span class="fa fa-lock form-control-feedback text-muted"></span>
+        </div>
+
+        <!--<div class="clearfix">-->
+            <!--<div class="checkbox c-checkbox pull-left mt0">-->
+                <!--<label>-->
+                    <!--<input type="checkbox" value="" required name="agreed">-->
+                    <!--<span class="fa fa-check"></span> I agree with the <a href="#">terms</a>-->
+                <!--</label>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <button data-auth-type="create" type="submit" class="btn btn-block btn-primary mt-lg">
+            {{_ 'auth.CREATE_ACCOUNT'}}
+        </button>
+    </form>
+    <p class="pt-sm text-center">{{_ 'auth.HAVE_AN_ACCOUNT'}}</p>
+    <a href="/login" class="btn btn-block btn-default">{{_ 'auth.AUTHENTICATE'}}</a>
+</template>

@@ -1,0 +1,31 @@
+{
+    "public": {
+        "analytics": ""
+    },
+    "private": {
+        "oAuth": {
+            "facebook": {
+                "appId": "",
+                "secret": ""
+            },
+            "github": {
+                "clientId": "",
+                "secret": ""
+            },
+            "google": {
+                "clientId": "",
+                "secret": ""
+            },
+            "twitter": {
+                "consumerKey": "",
+                "secret": ""
+            }
+        },
+        "emailConf": {
+            "smtpdomain": "smtp.gmail.com",
+            "domain": "localhost:3000",
+            "login": "sboardgame@gmail.com",
+            "password": ""
+        }
+    }
+}

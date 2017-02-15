@@ -1,0 +1,55 @@
+<template name="topnavbar">
+    <header class="topnavbar-wrapper">
+        <!-- START Top Navbar-->
+        <nav role="navigation" class="navbar topnavbar">
+            <!-- START Nav wrapper-->
+            <div class="nav-wrapper">
+                <!-- START Left navbar-->
+                <ul class="nav navbar-nav">
+                    <li class="nav-button">
+                        <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->
+                        <a href="#" data-toggle-state="aside-toggled" data-no-persist="true">
+                            <em class="fa fa-navicon"></em>
+                        </a>
+                    </li>
+                    <li class="active-title"><strong>{{sectionTitle}}</strong></li>
+                    <li class="brand-logo">
+                        <div>
+                            
+                        </div>
+                    </li>
+                    <li class="language-list">
+                        <!-- START Language list -->
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" data-toggle="dropdown" class="btn btn-default button-loc"><img src="/img/loc-pt.png" alt="{{_'dashboard.PORTUGUESE'}}" title="{{_'dashboard.PORTUGUESE'}}"></button>
+                                <ul role="menu" class="dropdown-menu dropdown-menu-right animated fadeInUpShort">
+                                    <li>
+                                        <a href="#" data-set-lang="en"><img src="/img/loc-en.png" alt="{{_'dashboard.ENGLISH'}}" title="{{_'dashboard.ENGLISH'}}"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-set-lang="pt"><img src="/img/loc-pt.png" alt="{{_'dashboard.PORTUGUESE'}}" title="{{_'dashboard.PORTUGUESE'}}"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- END Language list -->
+                    </li>
+                </ul>
+                <!-- END Left navbar-->
+
+            </div>
+            <!-- END Nav wrapper-->
+            <!-- START Search form-->
+            <form role="search" action="search.html" class="navbar-form">
+                <div class="form-group has-feedback">
+                    <input type="text" placeholder="Type and hit enter ..." class="form-control">
+                    <div data-search-dismiss="" class="fa fa-times form-control-feedback"></div>
+                </div>
+                <button type="submit" class="hidden btn btn-default">Submit</button>
+            </form>
+            <!-- END Search form-->
+        </nav>
+        <!-- END Top Navbar-->
+    </header>
+</template>

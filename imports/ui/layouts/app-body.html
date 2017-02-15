@@ -1,0 +1,16 @@
+<template name="layout">
+	<div class="wrapper section-main">
+		{{> topnavbar }}
+		{{> sidebar }}
+<!-- 		{{#HammerTouchArea gestureMap=templateGestures}}
+ -->		<section id="touchArea">
+			<div class="content-wrapper">
+				<div>
+					{{> yield }}
+				</div>
+			</div>
+		</section>
+<!-- 		{{/HammerTouchArea}}
+ -->		{{> footer }}
+	</div>
+</template>

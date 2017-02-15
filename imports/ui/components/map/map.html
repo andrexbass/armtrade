@@ -1,0 +1,39 @@
+<template name="map">
+    <div class="form-group">
+        <label>{{_ "places.SEARCH_ADDRESS"}}* </label>
+        <input type="text" name="autocomplete" placeholder="{{_ 'places.SEARCH_ADDRESS'}}" id="autocomplete"
+               class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label">{{_ "places.PLACE"}}*</label>
+        <input type="text" name="name" placeholder="{{_ 'places.PLACE_NAME'}}" id="place" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label">{{_ "places.ADDRESS"}}*</label>
+        <input type="text" name="formatted_address" placeholder="{{_ 'places.ADDRESS'}}" id="address"
+               class="form-control">
+    </div>
+
+    <div class="form-group">
+        <div class="map-container" style="align-content: center;">
+            {{> googleMap name="map" options=mapOptions}}
+        </div>
+    </div>
+
+    <div class="form-group hidden">
+        <label class="control-label">{{_ "places.COUNTRY_CODE"}}* </label>
+        <input name="country_short" type="text" value="" readonly>
+    </div>
+
+    <div class="form-group hidden">
+        <label class="control-label">{{_ "places.LATITUDE"}}* </label>
+        <input name="lat" type="text" value="" readonly>
+    </div>
+
+    <div class="form-group hidden">
+        <label class="control-label">{{_ "places.LONGITUDE"}}* </label>
+        <input name="lng" type="text" value="" readonly>
+    </div>
+</template>

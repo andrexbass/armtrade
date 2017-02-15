@@ -1,0 +1,26 @@
+<template name="loginForm">
+
+    <form role="form" data-parsley-validate="" novalidate="" class="mb-lg" id="login-form">
+        <div class="form-group has-feedback">
+            <input id="login-username" type="email" placeholder="{{_ 'auth.ENTER_YOUR_EMAIL'}}" autocomplete="off" required
+                   class="form-control">
+            <span class="fa fa-envelope form-control-feedback text-muted"></span>
+        </div>
+        <div class="form-group has-feedback">
+            <input id="login-password" type="password" placeholder="{{_ 'auth.ENTER_YOUR_PASSWORD'}}" required class="form-control">
+            <span class="fa fa-lock form-control-feedback text-muted"></span>
+        </div>
+        <div class="clearfix">
+            <div class="checkbox c-checkbox pull-left mt0">
+                <label>
+                    <input type="checkbox" value="" name="remember">
+                    <span class="fa fa-check"></span> {{_ 'auth.REMIND_ME'}}
+                </label>
+            </div>
+            <div class="pull-right"><a href="/recoverPassword" class="text-muted">{{_ 'auth.FORGOT_YOUR_PASSWORD'}}</a>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-block btn-primary mt-lg">{{_ 'auth.ENTER'}}</button>
+    </form>
+
+</template>

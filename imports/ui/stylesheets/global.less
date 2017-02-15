@@ -1,0 +1,111 @@
+.rounded-corners (@radius: 6px) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+}
+
+.topnavbar {
+    background-color: #FEB46B;
+    /* Juicy Cantaloupe color */
+    background-image: none;
+}
+
+.panel {
+    .rounded-corners;
+}
+
+.widget {
+    overflow: hidden;
+}
+
+.wrapper > .aside .aside-inner {
+    padding-top: 60px;
+}
+
+.active-title {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-top: 8px;
+    padding-left: 20px;
+}
+
+.nav-wrapper {
+    padding: 0 10px 0 0;
+    ul.nav {
+        margin: 8px 0;
+        width: 100%;
+
+        li.brand-logo,
+        li.language-list {
+            float: right;
+        }
+        li.language-list button {
+            background-color: transparent;
+            border: 0 none;
+            padding: 6px;
+        }
+        li.nav-button > a {
+            color: #FFFFFF;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-right: 0;
+        }
+    }
+}
+
+.avatar {
+    overflow: hidden;
+    border: 0 none;
+    img {
+        background-color: #e1e2e3;
+        border: 1px solid #e1e2e3;
+        .rounded-corners(40px);
+        display: inline-block;
+        height: auto;
+        line-height: 1.52857;
+        max-width: 100%;
+        padding: 2px;
+        transition: all 0.2s ease-in-out 0s;
+    }
+    span {
+        background-color: transparent !important;
+    }
+}
+
+.custom-avatar-initials {
+    display: none;
+}
+/**
+*================================================================================
+ *Botão de nova partida #48
+*Estilizar o botão de nova partida para circular estilo botão novo email do gmail.
+*regras:
+*1- quando for versão mobile aparecer o novo estilo circular.
+*2- na versão desktop ou tablet manter a versão retangular padrão.
+ *================================================================================
+*@author: danrfiuza <danielfiuza01@gmail.com>
+*date: 01/02/2017
+*/
+/**Faz o botão ficar redondo*/
+.btn-rounded{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px #666;
+    z-index:998;
+}
+
+/**Posiciona o botão no canto inferior direito a 30px*/
+.fixed-br{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+/**Aplica animação bounce ao ícone de um botão redondo*/
+.btn-rounded:hover .icon-bounce {
+    margin: auto;
+    -webkit-animation: bounce 1s;
+    animation: bounce 1s;
+}

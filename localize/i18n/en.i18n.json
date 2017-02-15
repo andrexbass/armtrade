@@ -1,0 +1,8 @@
+{
+  "generic": {
+    "SAVE_SUCCESS" : "Saved successfully",
+    "SAVE_ERROR" : "Error trying to save",
+    "ALERT_NO_RESULT": "No results found",
+    "PLEASE_ENTER_VALID_EMAIL_ADDRESS": "Please enter a valid email address"
+  }
+}

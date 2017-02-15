@@ -1,0 +1,7 @@
+<template name="login">
+    {{> socialLogin }}
+    <p class="text-center">{{_ 'auth.OR'}}</p>
+    {{> loginForm}}
+    <p class="pt-lg text-center">{{_ 'auth.DO_NOT_HAVE_AN_ACCOUNT'}}</p>
+    <a href="/signInWithEmail" class="btn btn-block btn-default mt-lg">{{_ 'auth.NEW_ACCOUNT'}}</a>
+</template>

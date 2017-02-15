@@ -1,0 +1,8 @@
+{
+  "generic": {
+    "SAVE_SUCCESS" : "Salvo com sucesso",
+    "SAVE_ERROR" : "Erro ao tentar salvar",
+    "ALERT_NO_RESULT": "Nenhum resultado encontrado",
+    "PLEASE_ENTER_VALID_EMAIL_ADDRESS": "Por favor, informe um e-mail válido"
+  }
+}

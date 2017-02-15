@@ -1,0 +1,55 @@
+<template name="sidebar">
+
+	{{#with currentUser}}
+
+	<aside class="aside">
+
+		<div class="aside-inner">
+
+			<nav class="sidebar" data-sidebar-anyclick-close="">
+
+				<ul class="nav">
+
+					{{#unless currentUser }}
+					<li>
+						<a href="/login">Login</a>
+					</li>
+					{{/unless}}
+
+					{{#with currentUser}}
+					<li class="collapse">
+
+						<div class="user-block-picture" style="padding: 20px">
+							<div class="user-block-info">
+								<span style="color: #FFF">
+									{{> avatar userId=userId}}
+									{{userName}} <br/>
+									{{userEmail}}<br/>
+								</span>
+								<a href="{{ pathFor 'profile' }}">
+									Editar perfil
+								</a>
+							</div>
+						</div>
+					</li>
+					{{/with}}
+
+					<li class="{{isActiveRoute regex='dashboard'}}">
+						<a href="{{ pathFor 'dashboard' }}" title="{{_ 'sidebar.nav.DASHBOARD' }}"
+						class="dashboard">
+						<em class="fa fa-tasks"></em>
+						<span>Dashboard</span>
+					</a>
+				</li>
+
+				<li>
+					{{> logout }}
+				</li>
+			</ul>
+
+		</nav>
+	</div>
+
+</aside>
+{{/with}}
+</template>

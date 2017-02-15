@@ -1,0 +1,109 @@
+<template name="profile">
+
+	<div class="container-md">
+
+		<div class="row">
+
+			<div class="col-md-3">
+				<div class="panel b">
+					<div class="panel-heading bg-gray-lighter text-bold text-uppercase">
+						{{_"user.PERSONAL_SETTINGS"}}
+					</div>
+					<div class="list-group">
+						<a href="#tabSetting1" data-toggle="tab" class="list-group-item">
+							{{_"user.PROFILE"}}
+						</a>
+						<a href="#tabSetting2" data-toggle="tab" class="list-group-item">
+							{{_"user.ACCOUNT"}}
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-9">
+
+				<div class="tab-content p0 b0">
+					<div id="tabSetting1" class="tab-pane active">
+
+						<div class="panel b">
+							<div class="panel-heading bg-gray-lighter text-bold text-uppercase">
+								{{_"user.PROFILE"}}
+							</div>
+
+							<div class="panel-body">
+								<form id="profile-form">
+
+									<div class="form-group">
+										<label>{{_"auth.NAME"}}</label>
+										<input type="text" class="form-control" id="profile-name" />
+									</div>
+
+									<div class="form-group">
+										<label>{{_"auth.E_MAIL_ADDRESS"}}</label>
+										<input type="email" class="form-control" id="profile-email" />
+									</div>
+									<button type="submit" class="btn btn-info updateSettings">
+										{{_"public.SAVE"}}
+									</button>
+									<p>
+										<small class="text-muted">* Integer fermentum accumsan metus, id sagittis ipsum molestie vitae</small>
+									</p>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div id="tabSetting2" class="tab-pane">
+						<div class="panel b">
+							<div class="panel-heading bg-gray-lighter text-bold text-uppercase">
+								{{_"user.ACCOUNT"}}
+							</div>
+
+							<div class="panel-body">
+								{{#if currentUser.services.facebook.name}}
+								{{_"user.DONT_HAVE_PASSWORD_FACEBOOK"}}
+								{{else}}
+								<form id="profile-update-password">
+									<div class="form-group">
+										<label>{{_"user.CURRENT_PASSWORD"}}</label>
+										<input type="password" class="form-control" id="profile-old-password" required />
+									</div>
+									<div class="form-group">
+										<label>{{_"user.NEW_PASSWORD"}}</label>
+										<input type="password" class="form-control" id="profile-password" required/>
+									</div>
+									<div class="form-group">
+										<label>{{_"user.CONFIRM_NEW_PASSWORD"}}</label>
+										<input type="password" class="form-control" id="profile-confirm-password" required />
+									</div>
+									<button type="submit" class="btn btn-info">{{_"public.SAVE"}}</button>
+									<p>
+										<small class="text-muted">* Integer fermentum accumsan metus, id sagittis ipsum molestie vitae</small>
+									</p>
+								</form>
+
+								{{/if}}
+							</div>
+						</div>
+
+						<div class="panel b">
+							<div class="panel-heading bg-danger text-bold">
+								{{_"user.DELETE_ACCOUNT"}}
+							</div>
+							<div class="panel-body bt">
+								<p>{{_"user.DELETE_ACCOUNT_TEXT"}}</p>
+								<button type="button" class="btn btn-default">
+									<span class="text-danger">
+										{{_"user.DELETE_ACCOUNT"}}
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
